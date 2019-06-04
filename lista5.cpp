@@ -73,7 +73,98 @@ void menuPrincipal()
 
 void tutorialAVL()
 {
-    //Matheus
+    char lixo;
+    system("clear");
+    printf("Ao estudarmos o conceito de árvore binária vimos que a ordem de inserção determina o formato de uma arvore de busca binária\n");
+    printf("Tal ordem na árvore binária implicaria na alteração de seu comportamento podendo exercer tanto uma busca binária quanto uma busca sequencial.\n"); 
+	printf("Sendo assim o Balanceamento se torna muito importante.\n");
+	printf("Logo Árvore AVL é uma árvore de busca binária balanceada com relação à altura de suas subárvores.\n");      
+    
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    printf("Uma árvore AVL verifica a altura das subárvores da esquerda e da direita, garantindo que essa dierença não seja maior que + ou - 1.\n");
+    printf("Esta diferença é seu Fator de Balanceamento.\n"); 
+    printf("Fb = altura(equerda) - altura(direita).\n");
+    printf("O Fator de balancemanto é calculado a cada nó.\n");
+    printf("E para cada nó a diferença de altura entre a subárvore da esquerda e da direita não pode passar de + ou - 1.\n");
+    printf("Lembrando que a altura de uma árvore vazia é -1, o fator de balanceamento é armazenado no prórpio nó.\n");
+
+   
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    printf("Agora iremos analisar se as seguintes árvores são AVL ou não.\n");
+    printf("            15          \n");
+    printf("          /    \\          \n");
+    printf("        8        23       \n");
+    printf("       / \\     /        \n");
+    printf("      2   12   20    \n");
+    printf("\n");    
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    printf("Analisando os extremos do lado esquerdo podemos observar que já está balanceado pois não existem mais subárvores, analisando a posição do número 8 também podemos observar o balanceamento pois os nós possuem a mesma altura = 0.\n");
+    printf("             8          \n");
+    printf("            / \\          \n");
+    printf("          2     12      \n");
+    printf("\n");
+
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    printf("Analisando o lado direito, podemos observar que também está balanceado pois não existe subárvores após o número 23\n");
+    printf("             15          \n");
+    printf("            /  \\          \n");
+    printf("          8      23      \n");
+    printf("\n");
+    printf("Logo como em nenhum lugar o fator de balanceamento ultrapassa o valor de 1 ou -1, trata-se de uma árvore AVL.\n");
+
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    printf("A seguinte árvore é bastante similar a primeira, mas ocorre a inserção do número 18 no lado direito.\n");
+    printf("            15          \n");
+    printf("          /    \\          \n");
+    printf("        8        23       \n");
+    printf("       / \\     /        \n");
+    printf("      2   12   20    \n");
+    printf("              /    \n");
+    printf("            18    \n");
+    printf("\n");
+    printf("Analisando a posição que contém o numero 18 temos o fator de balanceamento = 0 - (-1) ( O -1 provém da árvore vazia) = 1 estando assim balanceada.\n");
+    printf("Analisando a posição que contém o número 23 temos o seguinte fator de balanceamento, Fb = 1 - (-1) = 2 deixando assim de estar balanceada. Não se trata de uma Árvore AVL! \n");
+    printf("Ou seja a inserção de apenas um único número nesse caso foi o suficiente para fazer que uma árvora deixe de ser AVL, pois fez com que o fator de balanceamento ultrapassase os limite de +1 e -1. \n");
+    printf("Sendo necessário fazer a utilização das rotações simples para resolver o problema!\n");
+    
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    printf("Realizando a rotação à direita nossa árvore fica da seguinte forma\n");
+    printf("            15          \n");
+    printf("          /    \\          \n");
+    printf("        8        20       \n");
+    printf("       / \\     /  \\      \n");
+    printf("      2   12   18   23\n");
+    printf("Realizando os fatores de balanceamento em cada nó podemos observar que agora todos estão dentro do limite de + ou - 1.\n");
+
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+    printf("\n");
 }
 
 void operacoesAVL()
